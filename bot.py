@@ -32,6 +32,20 @@ def start_message(message):
                          f'Привет, {message.chat.first_name if message.chat.first_name else ""} {message.chat.last_name if message.chat.last_name else ""}, я тебя добавил в список гостей')
 
 
+@bot.message_handler(commands=['news'])
+def news(message):
+    if str(message.from_user.id) != '531184087':
+        return
+    bot.send_message(message.chat.id,
+                     f'Что ты хочешь разослать?')
+
+    bot.register_next_step_handler(message, print_news)
+
+
+def print_news(message):
+    for message_id in JSON.read_from_json(users_json):
+        bot.send_message(message_id, message.text)
+
 @bot.message_handler(
     regexp=r"(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&\/=]*))+")
 def set_presents(message):
