@@ -100,5 +100,12 @@ def the_new_year(message):
             del data[ID]
     JSON.write_to_json(users_json, data)
 
+@bot.message_handler(regexp=r'DEL.*')
+def clear_file(message):
+    if str(message.from_user.id) != '531184087':
+        return
+    data = dict()
+    JSON.write_to_json(users_json, data)
+
 
 bot.polling()
