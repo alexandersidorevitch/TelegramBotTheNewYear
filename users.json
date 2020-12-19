@@ -4,7 +4,19 @@
         "username": "sasha_sidorevich",
         "last_name": null,
         "wantable_presents": [
+            "https://sennelier.com.ua/kisti-dlja-hudozhnikov/raphael-petit-gris-12.html",
             "https://regex101.com/"
-        ]
+        ],
+        "recipient": "1031796444"
+    },
+    "471201789": {
+        "name": "Ilatan",
+        "username": null,
+        "last_name": null,
+        "wantable_presents": [
+            "https://sennelier.com.ua/kisti-dlja-hudozhnikov/raphael-petit-gris-12.html",
+            "https://ecobar.by/eda/pasty-i-urbechi/orehovye-pasty/almond-paste-nb"
+        ],
+        "recipient": "531184087"
     }
 }
